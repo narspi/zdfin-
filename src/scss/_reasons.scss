@@ -1,0 +1,53 @@
+.reasons {
+  padding: 100px 0 78px;
+
+  &__titlle {
+    margin: 0;
+  }
+
+  &__descr {
+    @include descr;
+    margin: 10px auto 55px;
+    max-width: 775px;
+  }
+
+  &__content {
+    background-color: $color-green;
+    color: white;
+    padding: 50px 25px 74px;
+    border-radius: 15px;
+  }
+
+  &__content-descr {
+    text-align: center;
+    @include inter;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 30px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 20px;
+    @include reset-list;
+    counter-reset: num;
+  }
+
+  &__list-item {
+    &::before {
+      display: block;
+      content: "0" counter(num) "/";
+      counter-increment: num;
+      font-size: 30px;
+      color: $color-green;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    width: 100%;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: white;
+    color: black;
+  }
+}
