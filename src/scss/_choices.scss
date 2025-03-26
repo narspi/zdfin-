@@ -3,4 +3,86 @@
   padding-bottom: 100px;
   background-color: $color-green;
   color: white;
+
+  &__container {
+    max-width: 1191px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    color: white;
+    margin-bottom: 50px;
+  }
+
+  &__content {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+
+  &__content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__content-row {
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+  }
+
+  &__block {
+    background-color: rgba(255, 255, 255, 0.39);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 0;
+    text-decoration: none;
+    flex-grow: 1;
+    color: inherit;
+    transition: transform 200ms;
+  }
+
+  &__block-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  &__block-link {
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  &__block-number {
+    @include inter;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  &__block-row-text {
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  &__decor {
+    display: block;
+    border-radius: 15px;
+  }
+
+  &__video {
+    padding: 10px;
+    background-color: #fff;
+    max-width: 863px;
+    margin: auto;
+
+    & video {
+      width: 100%;
+      aspect-ratio: 843 / 478;
+      border-radius: 15px;
+    }
+  }
 }

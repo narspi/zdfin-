@@ -84,6 +84,10 @@ const transportImg = () => {
   return src("./src/img/**/*.*").pipe(dest("dist/img"));
 };
 
+const transportFiles = () => {
+  return src("./src/assets/**/*.*").pipe(dest("dist/assets"));
+};
+
 const server = () => {
   sync.init({
     server: "./dist",
@@ -109,6 +113,7 @@ const defaultTask = series(
   createJs,
   transportFonts,
   transportImg,
+  transportFiles,
   server
 );
 
@@ -117,6 +122,7 @@ const buildTask = series(
   createCss,
   createJs,
   transportFonts,
+  transportFiles,
   transportImg
 );
 
