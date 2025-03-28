@@ -1,3 +1,72 @@
 .improvements {
   padding: 84px 0 50px;
+
+  &__shift {
+    margin-left: max(calc((100% - 1160px) / 2), 15px);
+    margin-top: 57px;
+  }
+
+  &__slider-scrollbar {
+    height: 18px;
+    background-color: #f1f1f1;
+    border-radius: 100px;
+    margin-bottom: 31px;
+  }
+
+  &__slider-drag {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: $color-green-light;
+    border-radius: 100px;
+    border: 3px solid #f1f1f1;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+  }
+
+  &__slider-track {
+    padding-left: 0;
+    margin: 0;
+    counter-reset: count;
+  }
+
+  &__item {
+    flex-shrink: 0;
+    width: 28%;
+    background-color: $color-green-light;
+    background-position: top center;
+    background-size: cover;
+    border-radius: 15px;
+    aspect-ratio: 343 / 408;
+    color: #262626;
+    counter-increment: count;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item-effect {
+    padding: 25px 25px 0px 25px;
+    width: 100%;
+    aspect-ratio: 344 / 288;
+    background-image: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0));
+    border-radius: 14px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    &::before {
+      content: "0" counter(count) "/";
+      display: block;
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item-text {
+    margin: 0;
+  }
+
+  &__item-bottom {
+    margin-top: auto;
+    padding: 0 25px 25px 25px;
+  }
 }

@@ -75,9 +75,26 @@ button {
   }
 }
 
+.btn-white {
+  text-decoration: none;
+  background-color: #fff;
+  display: inline-block;
+  padding: 11px 25px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #0f0f0f;
+  border-radius: 66px;
+  transition: transform 200ms;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
 @import "./top";
 @import "./header";
 @import "./reasons";
 @import "./businesses";
 @import "./choices";
 @import "./improvements";
+@import "./stages";

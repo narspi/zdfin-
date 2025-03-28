@@ -1,4 +1,19 @@
 import Swiper from '../../node_modules/swiper/swiper-bundle.min.mjs';
 import bla from "./bla.js";
 
-console.log(bla(5),bla('foof st'),Swiper)
+
+document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".swiper", {
+      slidesPerView: 3.8, 
+      spaceBetween: 18,
+      loop: false,
+      grabCursor: true,
+      mousewheel: true,
+      touchReleaseOnEdges: true,
+      scrollbar: {
+        el: ".improvements__slider-scrollbar",
+        draggable: true,
+        dragClass: "improvements__slider-drag"
+      },
+    });
+  });
