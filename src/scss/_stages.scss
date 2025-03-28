@@ -43,4 +43,19 @@
     font-size: 15px;
     margin: auto 0 0 0;
   }
+
+  &__video {
+    max-width: 963px;
+    margin: 0 auto;
+    & video {
+      width: 100%;
+      aspect-ratio: 960 / 544;
+    }
+  }
+
+  &__bot {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
 }

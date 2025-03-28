@@ -98,6 +98,7 @@ const server = () => {
   watch("./src/html/**/*.html", htmlInclude);
   watch("./src/scss/**/*.scss", createCss);
   watch("./src/js/**/*.js", createJs);
+  watch("./src/assets/**/*.*", transportFiles);
 };
 
 const buildServer = () => {
