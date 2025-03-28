@@ -1,0 +1,79 @@
+@media (min-width: 1000px) {
+  .stages {
+    &__list {
+      gap: 90px 30px;
+      flex-wrap: wrap;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    &__item {
+      position: relative;
+      width: calc((100% - 90px) / 4);
+
+      &--5 {
+        order: 4;
+      }
+
+      &--6 {
+        order: 3;
+      }
+
+      &--7 {
+        order: 2;
+      }
+
+      &--8 {
+        order: 1;
+      }
+
+      &--1,
+      &--2,
+      &--3 {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 4px;
+          right: 0;
+          height: 12px;
+          width: calc(100% - 44px);
+          background-image: url("../img/arrow-stages-right.svg");
+          background-position: center right;
+          background-size: auto 100%;
+        }
+      }
+
+      &--4 {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: calc(100% - 44px);
+          height: 207px;
+          background-image: url("../img/arrow-stages-left-down.svg");
+          background-position: top 4px right;
+          background-repeat: no-repeat;
+        }
+      }
+
+      &--5,
+      &--6,
+      &--7,
+      &--8 {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 4px;
+          right: 0;
+          height: 12px;
+          width: calc(100% - 44px);
+          background-image: url("../img/arrow-stages-left.svg");
+          background-position: center left;
+          background-size: auto 100%;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}

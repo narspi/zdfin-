@@ -6,4 +6,41 @@
     padding: 0 15px;
     margin: 0 auto;
   }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    counter-reset: stages;
+    margin: 50px 0;
+  }
+
+  &__item {
+    counter-increment: stages;
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+      content: "0" counter(stages);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 21px;
+      height: 21px;
+      background-color: $color-green;
+      border-radius: 50%;
+      font-size: 10px;
+      color: white;
+    }
+  }
+
+  &__item-top {
+    font-weight: 700;
+    font-size: 25px;
+    margin: 20px 0 15px;
+  }
+
+  &__item-descr {
+    font-size: 15px;
+    margin: auto 0 0 0;
+  }
 }

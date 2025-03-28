@@ -28,7 +28,7 @@
   &__slider-track {
     padding-left: 0;
     margin: 0;
-    counter-reset: count;
+    counter-reset: improvements;
   }
 
   &__item {
@@ -40,7 +40,7 @@
     border-radius: 15px;
     aspect-ratio: 343 / 408;
     color: #262626;
-    counter-increment: count;
+    counter-increment: improvements;
     display: flex;
     flex-direction: column;
   }
@@ -54,7 +54,7 @@
     font-weight: 700;
     margin-bottom: 15px;
     &::before {
-      content: "0" counter(count) "/";
+      content: "0" counter(improvements) "/";
       display: block;
       font-size: 30px;
       margin-bottom: 15px;
