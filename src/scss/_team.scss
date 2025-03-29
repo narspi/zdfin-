@@ -1,0 +1,142 @@
+.team {
+  &__container {
+    background-color: $color-green;
+    max-width: 1220px;
+    margin: 0 auto 50px;
+    padding: 83px 34px 121px;
+    border-radius: 15px;
+  }
+
+  &__title {
+    color: white;
+    margin-bottom: 50px;
+  }
+
+  &__lider {
+    margin-bottom: 50px;
+  }
+
+  &__lider-top {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__lider-title {
+    margin: 0;
+    background-color: #f1f1f1;
+    color: $color-green;
+    padding: 21px 39px 40px;
+    border-radius: 15px 15px 0 0;
+    font-size: 30px;
+  }
+
+  &__lider-position {
+    margin: 0;
+    background-color: $color-green-light;
+    border-radius: 0 15px 0 0;
+    padding: 21px 51px 36px 33px;
+    font-weight: bold;
+    color: #1b1b1b;
+  }
+
+  &__lider-body {
+    background-color: white;
+    color: #171717;
+    padding: 30px;
+    margin-top: -15px;
+    position: relative;
+    border-radius: 15px;
+    display: flex;
+    gap: 34px;
+  }
+
+  &__lider-photo {
+    position: relative;
+    width: 285px;
+    gap: 34px;
+    flex-shrink: 0;
+  }
+
+  &__lider-img {
+    display: block;
+    border-radius: 15px;
+    width: 100%;
+  }
+
+  &__lider-content {
+    color: #171717;
+
+    & ul {
+      padding-left: 17px;
+    }
+
+    & li {
+      font-weight: 500;
+      margin: 10px 0;
+      line-height: 1.1;
+    }
+
+    & a {
+      color: inherit;
+    }
+  }
+
+  &__social {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 27px;
+    display: flex;
+    justify-content: center;
+    @include reset-list;
+  }
+
+  &__social-item {
+    margin: 0 5px;
+  }
+
+  &__social-link {
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__social-img {
+    display: block;
+  }
+
+  &__list {
+    display: flex;
+    gap: 29px;
+  }
+
+  &__list-item {
+    width: 33%;
+    background-color: #fff;
+    border-radius: 15px;
+    text-align: center;
+    padding: 30px 28px;
+    font-weight: bold;
+  }
+
+  &__list-img {
+    border-radius: 15px;
+    display: block;
+    width: 100%;
+    aspect-ratio: 311 / 324;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__list-title {
+    margin: 39px 0 19px;
+    font-size: 30px;
+  }
+
+  &__list-descr {
+    margin: 0 0 32px;
+  }
+}
