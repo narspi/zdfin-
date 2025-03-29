@@ -1,0 +1,148 @@
+.cases {
+  padding: 100px 0 69px;
+
+  &__container {
+    overflow: hidden;
+    padding: 0 max(calc((100% - 1220px) / 2), 15px);
+  }
+
+  &__descr {
+    @include descr;
+    max-width: 643px;
+    margin: 29px auto 55px;
+  }
+
+  &__slider {
+    overflow: visible;
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  &__slide-top {
+    padding: 30px 27px 40px 27px;
+    border-radius: 15px 15px 0 0;
+    background-color: $color-green;
+    color: white;
+    display: flex;
+    align-items: start;
+    gap: 22px;
+  }
+
+  &__slide-main {
+    background-color: #f1f1f1;
+    color: #191919;
+    padding: 40px;
+    width: 100%;
+    margin-top: -15px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 398fr 673fr;
+    grid-template-rows: auto;
+    gap: 40px 33px;
+    grid-template-areas:
+      "item1 item2"
+      "item3 item2";
+  }
+
+  &__scrollbar {
+    margin-top: 50px;
+    height: 18px;
+    background-color: #f1f1f1;
+    border-radius: 100px;
+    margin-bottom: 31px;
+  }
+
+  &__scrollbar-drag {
+    height: 100%;
+    position: relative;
+    background: $color-green-light;
+    border-radius: 100px;
+    border: 3px solid #f1f1f1;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+  }
+
+  &__slide-category {
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  &__slide-title {
+    font-weight: 400;
+    font-size: 15px;
+    margin: 3px 0 10px;
+    max-width: 400px;
+  }
+
+  &__slide-tag {
+    margin: 0;
+    text-decoration: none;
+    color: inherit;
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  &__slide-item {
+    &--1 {
+      grid-area: item1;
+    }
+
+    &--2 {
+      grid-area: item2;
+    }
+
+    &--3 {
+      grid-area: item3;
+    }
+  }
+
+  &__slide-descr {
+    font-weight: 700;
+    font-size: 25px;
+    margin: 0;
+    &--color {
+      color: $color-green;
+    }
+
+    &--arrow {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      &::after {
+        content: "";
+        flex-grow: 1;
+        height: 12px;
+        background-image: url("../img/cases-arrow-left.svg");
+        background-position: center right;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__slide-list {
+    padding-left: 16px;
+    & li {
+      margin: 13px 0;
+    }
+    & li::marker {
+      color: $color-green;
+    }
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+}
+
+a.cases__slide-tag {
+  &:hover {
+    color: $color-green-light;
+  }
+}

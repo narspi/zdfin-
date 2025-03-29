@@ -16,4 +16,19 @@ document.addEventListener("DOMContentLoaded", function () {
         dragClass: "improvements__slider-drag"
       },
     });
+
+    new Swiper(".cases__slider", {
+      slidesPerView: 1,
+      spaceBetween: 57,
+      loop: false,
+      grabCursor: true,
+      mousewheel: true,
+      touchReleaseOnEdges: true,
+      scrollbar: {
+        el: ".cases__scrollbar",
+        draggable: true,
+        dragClass: "cases__scrollbar-drag"
+      },
+    });
+
   });
