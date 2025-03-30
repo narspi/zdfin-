@@ -4,7 +4,7 @@ import bla from "./bla.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     new Swiper(".swiper", {
-      slidesPerView: 3.8, 
+      slidesPerView: 'auto',
       spaceBetween: 18,
       loop: false,
       grabCursor: true,
