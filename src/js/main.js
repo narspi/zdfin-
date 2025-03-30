@@ -1,5 +1,4 @@
 import Swiper from '../../node_modules/swiper/swiper-bundle.min.mjs';
-import bla from "./bla.js";
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -9,12 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
       loop: false,
       grabCursor: true,
       mousewheel: true,
-      touchReleaseOnEdges: true,
       scrollbar: {
-        el: ".improvements__slider-scrollbar",
+        el: ".swiper-scrollbar",
+       
         draggable: true,
-        dragClass: "improvements__slider-drag"
       },
+  
     });
 
     new Swiper(".cases__slider", {
@@ -23,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
       loop: false,
       grabCursor: true,
       mousewheel: true,
-      touchReleaseOnEdges: true,
       scrollbar: {
         el: ".cases__scrollbar",
         draggable: true,
