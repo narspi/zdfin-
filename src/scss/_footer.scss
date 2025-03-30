@@ -76,16 +76,86 @@
     }
   }
 
-  &__list {
+  &__social {
     grid-column: 2 / 4;
     @include reset-list;
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
-    // gap: 33px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 45px 33px;
+    height: 335px;
   }
 
-  &__list-item {
-    background-color: $color-green-light;
+  &__social-link {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 28px;
+    display: inline-block;
+    position: relative;
+    display: block;
+    display: flex;
+    align-items: center;
+    &::before {
+      content: "";
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      display: block;
+      margin-right: 15px;
+      width: 50px;
+      height: 50px;
+    }
+
+    &--phone::before {
+      background-image: url("../img/icons/whats-up-icon.svg");
+    }
+
+    &--tg::before {
+      background-image: url("../img/icons/tg-icon.svg");
+    }
+
+    &--mail::before {
+      background-image: url("../img/icons/mail-icon.svg");
+    }
+
+    &--vk::before {
+      background-image: url("../img/icons/vk-icon.svg");
+    }
+
+    &--inst::before {
+      background-image: url("../img/icons/inst.svg");
+    }
+
+    &--rutube::before {
+      background-image: url("../img/icons/rutube-icon.png");
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    gap: 15px;
+    margin: 0 auto 15px;
+  }
+
+  &__info-inn {
+    margin: 0;
+  }
+
+  &__list {
+    display: contents;
+    @include reset-list;
+
+    & a {
+      color: inherit;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__copy {
@@ -95,27 +165,4 @@
     margin: 0 auto;
     color: $color-grey;
   }
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Две колонки */
-  grid-auto-flow: dense;
-  gap: 10px;
-}
-
-/* Первые 4 элемента каждого ряда в первой колонке */
-.grid-container > *:nth-child(4n + 1),
-.grid-container > *:nth-child(4n + 2),
-.grid-container > *:nth-child(4n + 3),
-.grid-container > *:nth-child(4n + 4) {
-  grid-column: 1;
-}
-
-/* Последние 2 элемента каждого ряда во второй колонке */
-.grid-container > *:nth-child(4n + 5),
-.grid-container > *:nth-child(4n + 6),
-.grid-container > *:nth-child(4n + 7),
-.grid-container > *:nth-child(4n + 8) {
-  grid-column: 2;
 }
