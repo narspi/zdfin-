@@ -7,32 +7,35 @@
     margin-top: 57px;
   }
 
-  &__slider-scrollbar {
+  &__slider .simplebar-track.simplebar-horizontal[style] {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 18px;
     background-color: #f1f1f1;
     border-radius: 100px;
-    margin-bottom: 31px;
-    position: relative;
+    cursor: pointer;
+    pointer-events: all;
   }
 
-  &__slider-drag {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    background: $color-green-light;
-    border-radius: 100px;
-    border: 3px solid #f1f1f1;
-    left: 0;
-    top: 0;
+  &__slider .simplebar-track.simplebar-horizontal[style] .simplebar-scrollbar {
     cursor: pointer;
   }
 
-  &__slider {
-    position: relative;
-    overflow: hidden;
+  &__slider
+    .simplebar-track.simplebar-horizontal[style]
+    .simplebar-scrollbar:before {
+    opacity: 1;
+    background-color: $color-green-light;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    cursor: pointer;
   }
 
   &__slider-track {
+    padding-top: 50px;
     padding-left: 0;
     margin: 0;
     counter-reset: improvements;
@@ -61,7 +64,7 @@
     padding: 25px 25px 0px 25px;
     width: 100%;
     aspect-ratio: 344 / 288;
-    background-image: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0));
+    // background-image: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0));
     border-radius: 14px;
     font-weight: 700;
     margin-bottom: 15px;
@@ -81,39 +84,4 @@
     margin-top: auto;
     padding: 0 25px 25px 25px;
   }
-}
-
-// Область, которая скроллится
-.improvements__scroll-scroll-content {
-  display: flex;
-  gap: 20px;
-  overflow: visible; // Убираем скрытие контента
-}
-
-// Горизонтальная дорожка (трек) скроллбара
-.improvements__scroll-track.improvements__scroll-track-horizontal {
-  height: 6px;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
-  position: absolute;
-  bottom: 5px;
-  left: 10px;
-  right: 10px;
-}
-
-// Ползунок скроллбара
-.improvements__scroll-scrollbar {
-  height: 6px;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 3px;
-  transition: background 0.3s;
-
-  &:hover {
-    background: rgba(0, 0, 0, 0.8);
-  }
-}
-
-// Убираем вертикальный скролл
-.improvements__scroll-track.improvements__scroll-track-vertical {
-  display: none !important;
 }

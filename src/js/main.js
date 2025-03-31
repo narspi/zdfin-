@@ -8,13 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (improvementsSlider) {
     const simpleBar = new SimpleBar(improvementsSlider, {
-      autoHide: false,
-      classNames: {
-        content: "improvements__scroll-content",
-        scrollContent: "improvements__scroll-scroll-content",
-        scrollbar: "improvements__scroll-scrollbar",
-        track: "improvements__scroll-track",
-      },
+ 
     });
 
     improvementsSlider.addEventListener("wheel", function (event) {
@@ -24,8 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-
-  console.log(casesSlider);
 
   if (casesSlider) {
     new Swiper(casesSlider, {
