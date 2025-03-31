@@ -22,6 +22,10 @@
     align-items: start;
   }
 
+  &__slider:not(.swiper-initialized) &__slide {
+    margin-right: 57px;
+  }
+
   &__slide-top {
     padding: 30px 27px 40px 27px;
     border-radius: 15px 15px 0 0;

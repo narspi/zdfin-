@@ -27,6 +27,11 @@
     cursor: pointer;
   }
 
+  &__slider {
+    position: relative;
+    overflow: hidden;
+  }
+
   &__slider-track {
     padding-left: 0;
     margin: 0;
@@ -76,4 +81,39 @@
     margin-top: auto;
     padding: 0 25px 25px 25px;
   }
+}
+
+// Область, которая скроллится
+.improvements__scroll-scroll-content {
+  display: flex;
+  gap: 20px;
+  overflow: visible; // Убираем скрытие контента
+}
+
+// Горизонтальная дорожка (трек) скроллбара
+.improvements__scroll-track.improvements__scroll-track-horizontal {
+  height: 6px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  right: 10px;
+}
+
+// Ползунок скроллбара
+.improvements__scroll-scrollbar {
+  height: 6px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  transition: background 0.3s;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+// Убираем вертикальный скролл
+.improvements__scroll-track.improvements__scroll-track-vertical {
+  display: none !important;
 }
