@@ -3,7 +3,58 @@
   overflow: hidden;
 
   &__container {
-    max-width: 1220px;
+    max-width: 1250px;
     margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  &__title {
+    margin-bottom: 67px;
+  }
+
+  &__shift {
+    padding-left: max(15px, calc((100% - 1220px) / 2));
+  }
+
+  &__slider .simplebar-track.simplebar-horizontal[style] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    background-color: #f1f1f1;
+    border-radius: 100px;
+    cursor: pointer;
+    pointer-events: all;
+  }
+
+  &__slider .simplebar-track.simplebar-horizontal[style] .simplebar-scrollbar {
+    cursor: pointer;
+  }
+
+  &__slider
+    .simplebar-track.simplebar-horizontal[style]
+    .simplebar-scrollbar:before {
+    opacity: 1;
+    background-color: $color-green-light;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    cursor: pointer;
+  }
+
+  &__list {
+    @include reset-list;
+    display: flex;
+    gap: 20px;
+    padding-top: 50px;
+  }
+
+  &__item {
+    flex-shrink: 0;
+    width: 343px;
+    aspect-ratio: 343 / 335;
+    object-fit: cover;
+    object-position: top center;
   }
 }

@@ -56,10 +56,6 @@
     flex-direction: column;
   }
 
-  &__slider:not(.swiper-initialized) &__item {
-    margin-right: 18px;
-  }
-
   &__item-effect {
     padding: 25px 25px 0px 25px;
     width: 100%;
