@@ -40,6 +40,7 @@
     margin: 0;
     counter-reset: improvements;
     display: flex;
+    gap: 18px;
   }
 
   &__item {
@@ -59,8 +60,6 @@
   &__item-effect {
     padding: 25px 25px 0px 25px;
     width: 100%;
-    aspect-ratio: 344 / 288;
-    // background-image: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0));
     border-radius: 14px;
     font-weight: 700;
     margin-bottom: 15px;

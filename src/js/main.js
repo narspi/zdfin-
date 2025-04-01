@@ -25,9 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       spaceBetween: 57,
       loop: false,
       grabCursor: true,
-      mousewheel: {
-        releaseOnEdges: true,
-      },
+      mousewheel: true,
       scrollbar: {
         el: ".cases__scrollbar",
         draggable: true,
@@ -39,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (reviewsSlider) {
     const reviewsBar = new SimpleBar(reviewsSlider, {});
 
-    reviewsBar.addEventListener("wheel", function (event) {
+    reviewsSlider.addEventListener("wheel", function (event) {
       if (event.deltaY !== 0) {
         event.preventDefault();
         reviewsBar.getScrollElement().scrollLeft += event.deltaY;

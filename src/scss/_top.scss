@@ -5,14 +5,240 @@
   background-size: cover;
   background-position: center;
 
-  padding: 25px 74px 41px;
+  padding: 33px 0;
+
+  &__container {
+    max-width: 1314px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  &__body {
+    display: flex;
+    align-items: flex-end;
+    gap: 17px;
+  }
+
+  &__intro {
+    flex-shrink: 0;
+    background-color: white;
+    width: 798px;
+    padding: 85px 21px 110px 21px;
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+  }
+
+  &__view-text {
+    margin: 0 auto 15px;
+    color: #000000;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  &__title {
+    @include inter;
+    font-size: 40px;
+    font-weight: 600;
+    color: $color-green;
+    margin: 15px 0 19px;
+  }
+
+  &__extra-text {
+    margin: 19px auto 109px;
+    color: #1a1a1a;
+    line-height: 1.4;
+  }
+
+  &__intro-btn {
+    background-color: $color-green;
+    color: white;
+    font-family: inherit;
+    padding: 18px 36px;
+    font-weight: 500;
+    line-height: 1.4;
+    border-radius: 66px;
+    border: none;
+    transition: transform 200ms;
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  &__extra {
+    flex-grow: 1;
+  }
+
+  &__extra-master {
+    display: block;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.51);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    border-radius: 15px;
+    position: relative;
+    backdrop-filter: blur(6px);
+    transition: all 200ms;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      width: 33px;
+      height: 33px;
+      background-image: url("../img/icons/header-master-icon.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    &:hover {
+      background-color: rgb(255, 255, 255);
+    }
+  }
+
+  &__extra-row {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  &__extra-row-link {
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.91);
+    padding: 11px;
+    color: #1a1a1a;
+    text-decoration: none;
+    min-height: 102px;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all 200ms;
+
+    &:hover {
+      background-color: $color-green-light;
+      color: white;
+    }
+  }
+
+  &__extra-nalog {
+    display: block;
+    padding: 11px 50px 11px 11px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.91);
+    margin-top: 20px;
+    display: flex;
+    align-items: start;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    transition: all 200ms;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 189px;
+      aspect-ratio: 189 / 80;
+      background-image: url("../img/nalog-decor.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 15px;
+      margin-right: 22px;
+    }
+
+    &::after {
+      content: "";
+      width: 33px;
+      height: 33px;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      background-image: url("../img/icons/nalog-arrow-decor.svg");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &:hover {
+      background-color: $color-green-light;
+      color: white;
+    }
+  }
 }
 
 .nav {
   &__list {
-    list-style: none;
-    padding-left: 0;
+    @include reset-list;
     display: flex;
-    margin: 0;
+
+    & li {
+      padding: 0 25px;
+    }
+
+    & a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.4;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.header {
+  &__top {
+    display: flex;
+    align-items: center;
+  }
+
+  &__links {
+    width: 798px;
+    padding: 17px 24px;
+    background-color: #fff;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    display: block;
+    margin-right: 70px;
+
+    & img {
+      display: block;
+    }
+  }
+
+  &__phone {
+    margin: 0 25px 0 40px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  &__btn-form {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 10px;
+    background-color: $color-green-light;
+    color: #fff;
+    font-family: inherit;
+    border: none;
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 400;
+    align-self: center;
   }
 }
