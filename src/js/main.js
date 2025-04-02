@@ -3,9 +3,40 @@ import SimpleBar from "simplebar";
 import { Scrollbar, Mousewheel } from "swiper/modules";
 
 document.addEventListener("DOMContentLoaded", function () {
+  const headerBurger = document.querySelector(".header__burger");
+  const nav = document.querySelector(".nav");
+  const headerInner = document.querySelector(".header__inner");
   const improvementsSlider = document.querySelector(".improvements__slider");
   const casesSlider = document.querySelector(".cases__slider");
   const reviewsSlider = document.querySelector(".reviews__slider");
+
+  if (headerBurger && nav && headerInner) {
+    const headerMenu = document.createElement("div");
+    headerMenu.classList.add("header__menu");
+    headerMenu.innerHTML = `
+    <div class="header__menu-top">
+      <a href="#" class="header__logo">
+        <img src="./img/logo.png" alt="Вернуться на главную">
+      </a>
+      <button class="header__menu-close" aria-label="Закрыть меню" aria-controls="main-menu"></button>
+    </div>
+    `;
+    const cloneNav = nav.cloneNode(true);
+    cloneNav.className = 'nav-menu';
+    headerMenu.append(cloneNav);
+    headerInner.append(headerMenu);
+
+    headerMenu.addEventListener('click',(event)=> {
+      const target = event.target;
+      if (target.closest('.header__menu-close')) {
+        headerMenu.classList.remove('active')
+      }
+    })
+
+    headerBurger.addEventListener("click", () => {
+      headerMenu.classList.add('active')
+    });
+  }
 
   if (improvementsSlider) {
     const improvementsBar = new SimpleBar(improvementsSlider, {});
