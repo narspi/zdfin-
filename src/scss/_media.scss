@@ -108,6 +108,10 @@
 }
 
 @media (max-width: 1200px) {
+  .title {
+    font-size: 32px;
+  }
+
   .header {
     &__inner {
       background-color: white;
@@ -176,6 +180,76 @@
       }
     }
   }
+
+  .reasons {
+    &__descr {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    &__content-descr {
+      font-size: 28px;
+    }
+
+    &__list-item {
+      flex-shrink: 0;
+      width: calc((100% - 60px) / 4);
+      font-size: 18px;
+      &::before {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .businesses {
+    &__descr {
+      font-size: 16px;
+      margin: 20px 0;
+    }
+  }
+
+  .choices {
+    &__content {
+      flex-wrap: wrap;
+      max-width: 863px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__content-column {
+      display: contents;
+    }
+
+    &__content-row {
+      width: 100%;
+    }
+
+    &__block {
+      min-height: 117px;
+      order: 1;
+    }
+
+    &__decor {
+      flex-grow: 1;
+      order: 2;
+
+      &--one {
+        width: calc((156 / (156 + 133)) * (100% - 20px));
+      }
+
+      &--two {
+        width: calc((133 / (156 + 133)) * (100% - 20px));
+      }
+    }
+
+    &__block-link--arrow {
+      order: 3;
+    }
+
+    &__video {
+      border-radius: 15px;
+    }
+  }
 }
 
 @media (max-width: 900px) {
@@ -222,9 +296,39 @@
       }
     }
   }
+
+  .reasons {
+    &__list {
+      flex-wrap: wrap;
+    }
+
+    &__list-item {
+      width: calc((100% - 20px) / 2);
+    }
+  }
+
+  .businesses {
+    &__list-item {
+      &:nth-child(4n + 1),
+      &:nth-child(4n + 4),
+      &:nth-child(4n + 2),
+      &:nth-child(4n + 3) {
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media (max-width: 600px) {
+  .btn-light {
+    padding: 15px 30px;
+    font-size: 15px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
   .top {
     &__extra {
       grid-template-columns: 1fr;
@@ -272,6 +376,72 @@
   .nav-menu {
     justify-content: start;
   }
+
+  .reasons {
+    padding: 50px 0;
+
+    &__descr {
+      margin: 20px 0 40px;
+    }
+
+    &__list-item {
+      width: 100%;
+    }
+  }
+
+  .businesses {
+    &__list {
+      margin-bottom: 45px;
+    }
+
+    &__bot {
+      padding-bottom: 50px;
+    }
+  }
+
+  .choices {
+    padding: 50px 0;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__content {
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    &__content-row {
+      gap: 10px;
+    }
+
+    &__block-number {
+      font-size: 20px;
+    }
+
+    &__block {
+      font-size: 15px;
+      min-height: 65px;
+      padding: 11px;
+    }
+
+    &__block-link--ring-arrow::before {
+      width: 24px;
+      height: 24px;
+    }
+
+    &__block-top {
+      min-height: 98px;
+    }
+
+    &__block-link--arrow::before {
+      display: none;
+    }
+
+    &__block-row-text {
+      text-align: right;
+    }
+  }
 }
 
 @media (max-width: 450px) {
@@ -316,6 +486,35 @@
 
     &__phone {
       font-size: 12px;
+    }
+  }
+
+  .reasons {
+    &__content {
+      padding: 30px 10px 10px;
+    }
+
+    &__content-descr {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+
+    &__list-item {
+      font-size: 15px;
+
+      &::before {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .businesses {
+    &__list-item {
+      padding: 10px;
+    }
+
+    &__list-content {
+      width: 100%;
     }
   }
 }
