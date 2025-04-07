@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const improvementsSlider = document.querySelector(".improvements__slider");
   const casesSlider = document.querySelector(".cases__slider");
   const reviewsSlider = document.querySelector(".reviews__slider");
+  const stagesSlider = document.querySelector(".stages__slider");
+
+  const mediaQueryWidth450 = window.matchMedia("(max-width: 450px)");
+  const mediaQueryWidth900 = window.matchMedia("(max-width: 900px)");
 
   if (headerBurger && nav && headerInner) {
     const headerMenu = document.createElement("div");
@@ -22,31 +26,65 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
     `;
     const cloneNav = nav.cloneNode(true);
-    cloneNav.className = 'nav-menu';
+    cloneNav.className = "nav-menu";
     headerMenu.append(cloneNav);
     headerInner.append(headerMenu);
 
-    headerMenu.addEventListener('click',(event)=> {
+    headerMenu.addEventListener("click", (event) => {
       const target = event.target;
-      if (target.closest('.header__menu-close')) {
-        headerMenu.classList.remove('active')
+      if (target.closest(".header__menu-close")) {
+        headerMenu.classList.remove("active");
       }
-    })
+    });
 
     headerBurger.addEventListener("click", () => {
-      headerMenu.classList.add('active')
+      headerMenu.classList.add("active");
     });
   }
 
-  if (improvementsSlider) {
-    const improvementsBar = new SimpleBar(improvementsSlider, {});
+  let improvementsBar;
 
-    improvementsSlider.addEventListener("wheel", function (event) {
-      if (event.deltaY !== 0) {
-        event.preventDefault();
-        improvementsBar.getScrollElement().scrollLeft += event.deltaY;
-      }
-    });
+  const handleWheel = (event) => {
+    if (event.deltaY !== 0) {
+      event.preventDefault();
+      improvementsBar.getScrollElement().scrollLeft += event.deltaY;
+    }
+  };
+
+  const initSimpleBar = (matches) => {
+    if (!matches && !improvementsBar) {
+      improvementsBar = new SimpleBar(improvementsSlider, {});
+      improvementsSlider.addEventListener("wheel", handleWheel);
+    } else if (matches && improvementsBar) {
+      improvementsBar.unMount();
+      improvementsBar = null;
+      improvementsSlider.removeEventListener("wheel", handleWheel);
+    }
+  };
+
+  if (improvementsSlider) {
+    initSimpleBar(mediaQueryWidth450.matches);
+    mediaQueryWidth450.addEventListener("change", (e) =>
+      initSimpleBar(e.matches)
+    );
+  }
+
+  let stagesBar;
+
+  const initStagesBar = (matches) => {
+    if (matches && !stagesBar) {
+      stagesBar = new SimpleBar(stagesSlider, {});
+    } else if (!matches && stagesBar) {
+      stagesBar.unMount();
+      stagesBar = null;
+    }
+  };
+
+  if (stagesSlider) {
+    initStagesBar(mediaQueryWidth900.matches);
+    mediaQueryWidth900.addEventListener("change", (e) =>
+      initStagesBar(e.matches)
+    );
   }
 
   if (casesSlider) {
@@ -75,4 +113,4 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-});
+}); 

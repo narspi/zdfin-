@@ -130,6 +130,10 @@
     }
   }
 
+  &__slide-modif--color {
+    color: $color-green;
+  }
+
   &__slide-list {
     padding-left: 16px;
     & li {

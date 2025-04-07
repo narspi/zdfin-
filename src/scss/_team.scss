@@ -47,6 +47,7 @@
     position: relative;
     border-radius: 15px;
     display: flex;
+    align-items: start;
     gap: 34px;
   }
 
@@ -106,6 +107,10 @@
 
   &__social-img {
     display: block;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    object-position: center;
   }
 
   &__list {

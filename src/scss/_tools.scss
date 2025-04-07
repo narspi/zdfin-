@@ -10,7 +10,7 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, calc((100% - 60px) / 4));
     gap: 20px;
   }
 
@@ -50,8 +50,12 @@
     margin: 0 0 25px 0;
   }
 
+  &__item-bot {
+    margin-top: auto;
+  }
+
   &__item-price {
-    margin: auto 0 11px 0;
+    margin: 0 0 11px 0;
     font-weight: 700;
   }
 
