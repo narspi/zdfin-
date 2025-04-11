@@ -37,13 +37,15 @@ const createCss = () => {
     .pipe(gulpif(isDevelopment, sourcemaps.init()))
     .pipe(
       scss({
-        outputStyle: "expanded",
+        outputStyle: `${isDevelopment? 'expanded' : 'compressed'}`,
       })
     )
     .pipe(
-      cleanCSS({
-        format: "beautify",
-      })
+      cleanCSS(
+        {
+          level: 2
+        }
+      )
     )
     .pipe(gulpif(isDevelopment, sourcemaps.write()))
     .pipe(dest("dist/css"))

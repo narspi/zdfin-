@@ -1,0 +1,84 @@
+.page-wrapper {
+  padding: 50px 0;
+  line-height: 1.4;
+
+  &__title {
+    @include inter;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.4;
+    color: #333333;
+    text-align: center;
+  }
+
+  &__content {
+    margin-top: 30px;
+  }
+
+  & ol,
+  & ul {
+    padding-left: 1.4em;
+  }
+}
+
+.tool-page {
+  padding: 50px 0;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 417fr 713fr;
+    margin: 64px 0 30px;
+    gap: 30px;
+  }
+
+  &__row-item {
+    background-color: #f1f1f1;
+    padding: 30px;
+    border-radius: 15px;
+    min-height: 300px;
+  }
+
+  &__row-title {
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 0 15px;
+    color: $color-green;
+  }
+
+  &__bot {
+    background-color: $color-green;
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: start;
+    gap: 15px;
+    min-height: 205px;
+  }
+
+  &__bot-title {
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 0 15px;
+  }
+
+  &__bot-descr {
+    max-width: 500px;
+  }
+
+  &__bot-info {
+    margin-left: auto;
+    background-color: white;
+    color: #333333;
+    padding: 24px 20px;
+    border-radius: 15px;
+    min-width: 274px;
+    min-height: 150px;
+  }
+
+  &__bot-price {
+    margin: 0;
+    font-weight: bold;
+    font-size: 25px;
+  }
+}

@@ -4,13 +4,6 @@
 
 // @font-face {
 //   font-family: "gilroy";
-//   src: url("../fonts/gilroy-medium.woff2");
-//   font-weight: 500;
-//   font-style: normal;
-//   font-display: swap;
-// }
-// @font-face {
-//   font-family: "gilroy";
 //   src: url("../fonts/gilroy-semibold.woff2");
 //   font-weight: 600;
 //   font-style: normal;
@@ -27,6 +20,10 @@ body {
 
 button {
   cursor: pointer;
+}
+
+a {
+  color: $color-green;
 }
 
 .container {
@@ -92,6 +89,27 @@ button {
   }
 }
 
+.zdin-modal {
+  position: fixed;
+  top: 0;
+  height: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform-origin: top center;
+  transition: 200ms;
+  transform: scale(0);
+
+  &.active {
+    transform: scale(1);
+  }
+
+  &__container {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
 @import "./header-main";
 @import "./top";
 @import "./reasons";
@@ -104,4 +122,5 @@ button {
 @import "./team";
 @import "./reviews";
 @import "./footer";
+@import "./new-page";
 @import "./media";

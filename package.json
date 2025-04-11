@@ -24,7 +24,6 @@
     "gulp-if": "^3.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
-    "gulp-terser": "^2.1.0",
     "localtunnel": "^2.0.2",
     "npm": "^10.3.0",
     "panini": "^1.7.2",

@@ -267,18 +267,12 @@
   }
 
   &__menu {
-    transition: transform 100ms;
-    transform-origin: 50% 0;
-    position: absolute;
-    top: -33px;
-    left: 0;
     width: 100%;
     padding: 46px 13px 25px 13px;
     border-radius: 0 0 15px 15px;
     border: 2px solid $color-green;
     border-top: none;
     background: #fff;
-    transform: scale(0);
   }
 
   &__menu-top {

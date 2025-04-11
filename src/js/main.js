@@ -5,7 +5,8 @@ import { Scrollbar, Mousewheel } from "swiper/modules";
 document.addEventListener("DOMContentLoaded", function () {
   const headerBurger = document.querySelector(".header__burger");
   const nav = document.querySelector(".nav");
-  const headerInner = document.querySelector(".header__inner");
+  const zdModal = document.querySelector("#zdin-modal");
+  const zdModalContainer = document.querySelector(".zdin-modal__container");
   const improvementsSlider = document.querySelector(".improvements__slider");
   const casesSlider = document.querySelector(".cases__slider");
   const reviewsSlider = document.querySelector(".reviews__slider");
@@ -14,13 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const mediaQueryWidth450 = window.matchMedia("(max-width: 450px)");
   const mediaQueryWidth900 = window.matchMedia("(max-width: 900px)");
 
-  if (headerBurger && nav && headerInner) {
+  if (headerBurger && nav) {
     const headerMenu = document.createElement("div");
     headerMenu.classList.add("header__menu");
     headerMenu.innerHTML = `
     <div class="header__menu-top">
       <a href="#" class="header__logo">
-        <img src="./img/logo.png" alt="Вернуться на главную">
+        <img src="/img/logo.png" alt="Вернуться на главную">
       </a>
       <button class="header__menu-close" aria-label="Закрыть меню" aria-controls="main-menu"></button>
     </div>
@@ -28,17 +29,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const cloneNav = nav.cloneNode(true);
     cloneNav.className = "nav-menu";
     headerMenu.append(cloneNav);
-    headerInner.append(headerMenu);
+    zdModalContainer.append(headerMenu);
 
-    headerMenu.addEventListener("click", (event) => {
+    zdModal.addEventListener("click", (event) => {
       const target = event.target;
       if (target.closest(".header__menu-close")) {
-        headerMenu.classList.remove("active");
+        zdModal.classList.remove("active");
+        document.body.style = null;
       }
     });
 
     headerBurger.addEventListener("click", () => {
-      headerMenu.classList.add("active");
+      zdModal.classList.add("active");
+      document.body.style = "overflow: hidden;";
     });
   }
 
