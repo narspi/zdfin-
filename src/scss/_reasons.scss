@@ -25,6 +25,7 @@
     margin-top: 0;
     margin-bottom: 40px;
     font-size: 30px;
+    text-transform: uppercase;
   }
 
   &__list {
@@ -49,5 +50,16 @@
     padding: 20px;
     background-color: white;
     color: black;
+  }
+
+  &__list-text {
+    &--bold {
+      font-weight: 700;
+      color: $color-green;
+    }
+
+    &--medium {
+      font-weight: 500;
+    }
   }
 }

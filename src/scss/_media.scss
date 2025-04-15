@@ -473,6 +473,16 @@
       padding: 20px;
     }
   }
+
+  .decor-list {
+    &__items {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: calc((100% - 20px) / 2);
+    }
+  }
 }
 
 @media (max-width: 900px) {
@@ -733,6 +743,7 @@
       min-height: unset;
       padding: 25px 15px 15px;
       width: 100%;
+      max-width: 400px;
     }
   }
 }
@@ -905,6 +916,26 @@
 
     &__item-text {
       font-size: 15px;
+    }
+  }
+
+  .improvements-modal {
+    &__inner {
+      padding: 15px;
+      font-size: 15px;
+    }
+
+    &__close {
+      width: 15px;
+      height: 15px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__descr {
+      margin: 20px 0 15px;
     }
   }
 
@@ -1088,6 +1119,81 @@
       }
     }
   }
+
+  .tool-page {
+    font-size: 15px;
+
+    &__row-item {
+      padding: 15px;
+    }
+
+    &__row-title {
+      font-size: 20px;
+    }
+
+    &__bot {
+      font-size: 15px;
+      gap: 0px;
+      padding: 15px;
+    }
+
+    &__bot-info {
+      padding: 15px;
+      max-width: 300px;
+    }
+
+    &__bot-price {
+      font-size: 15px;
+    }
+
+    &__bot-title {
+      font-size: 20px;
+    }
+
+    &__bot-text {
+      font-size: 12px;
+    }
+  }
+
+  .new-page {
+    padding-top: 20px;
+    &__content {
+      font-size: 15px;
+    }
+  }
+
+  .decor-list {
+    margin-top: 20px;
+    padding: 25px 15px;
+
+    &__title {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__items {
+      font-size: 15px;
+    }
+
+    &__item {
+      width: 100%;
+      padding: 15px;
+      &::before {
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+    }
+
+    &__bot-descr {
+      margin: 25px auto;
+      font-size: 15px;
+    }
+
+    &__btn {
+      font-size: 15px;
+      padding: 15px 30px;
+    }
+  }
 }
 
 @media (max-width: 450px) {
@@ -1109,6 +1215,14 @@
       font-size: 20px;
       margin-top: 20px;
       margin-bottom: 15px;
+    }
+
+    &__extra {
+      gap: 10px;
+    }
+
+    &__extra-row {
+      gap: 10px;
     }
 
     &__extra-text {

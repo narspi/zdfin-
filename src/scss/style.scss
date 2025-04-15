@@ -83,6 +83,7 @@ a {
   line-height: 1.4;
   color: #0f0f0f;
   border-radius: 66px;
+  border: none;
   transition: transform 200ms;
   &:hover {
     transform: scale(1.05);
@@ -107,6 +108,136 @@ a {
   &__container {
     width: 100%;
     padding: 0 15px;
+  }
+}
+
+.form-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #fff;
+
+  &__close {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url("../img/icons/burger-close-icon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  &__loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #555;
+    z-index: 10;
+    text-align: center;
+    padding: 0 15px;
+  }
+}
+
+.new-page {
+  padding: 50px 0;
+
+  &__content {
+    line-height: 1.4;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+}
+
+.decor-list {
+  margin-top: 60px;
+  padding: 50px 25px;
+  background-color: $color-green;
+  color: white;
+  border-radius: 15px;
+
+  &__title {
+    text-align: center;
+    @include inter;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+
+  &__items {
+    display: flex;
+    gap: 20px;
+    @include reset-list;
+    counter-reset: num;
+  }
+
+  &__item {
+    &::before {
+      display: block;
+      content: "0" counter(num) "/";
+      counter-increment: num;
+      font-size: 30px;
+      color: $color-green;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    width: 100%;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: white;
+    color: black;
+  }
+
+  &__text {
+    &--bold {
+      font-weight: 700;
+      color: $color-green;
+    }
+
+    &--semibold {
+      font-weight: 600;
+    }
+  }
+
+  &__bot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__bot-descr {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 830px;
+    font-weight: 600;
+  }
+
+  &__btn {
+    padding: 18px 36px;
+    border: none;
+    display: block;
+    background-color: #fff;
+    color: #121212;
+    border-radius: 66px;
+    font-weight: 500;
+    transition: transform 200ms;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }
 
