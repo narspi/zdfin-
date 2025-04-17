@@ -122,6 +122,10 @@ a {
   overflow: auto;
   background-color: #fff;
 
+  &--padding {
+    padding: 15px;
+  }
+
   &__close {
     width: 15px;
     height: 15px;
@@ -147,6 +151,147 @@ a {
     z-index: 10;
     text-align: center;
     padding: 0 15px;
+  }
+
+  &__elem {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  &__descr {
+    margin: 0;
+    font-weight: 700;
+    text-align: center;
+    color: $color-green;
+    @include inter;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 1.4;
+  }
+
+  &__label {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  &__field {
+    padding: 10px 27px;
+    border-radius: 24px;
+    border: 2px solid $color-green-light;
+    width: 100%;
+
+    &::placeholder {
+      color: white;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-green-light;
+      outline-offset: 1px;
+    }
+
+    &:-webkit-autofill {
+      box-shadow: 0 0 0 1000px white inset !important;
+      -webkit-text-fill-color: black !important;
+      transition: background-color 9999s ease-out, color 9999s ease-out;
+    }
+  }
+
+  &__field-text {
+    position: absolute;
+    top: 24px;
+    left: 25px;
+    display: block;
+    padding: 0px 5px;
+    color: $color-green;
+    background-color: #fff;
+    transition: transform 100ms;
+    transform: translateY(-12px);
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: attr(data-text);
+    }
+  }
+
+  &__field:required + &__field-text {
+    &::after {
+      content: "";
+      display: inline-block;
+      background-image: url("../img/icons/asterisk.svg");
+      width: 10px;
+      height: 22px;
+      background-repeat: no-repeat;
+      background-size: 8px 8px;
+      background-position: top 2px right;
+    }
+  }
+
+  &__field:focus + &__field-text,
+  &__field:not(:placeholder-shown) + &__field-text,
+  &__textarea:focus + &__field-text,
+  &__textarea:not(:placeholder-shown) + &__field-text {
+    transform: translateY(-35px);
+  }
+
+  &__textarea {
+    width: 100%;
+    min-height: 150px;
+    display: block;
+    resize: none;
+    padding: 10px 27px;
+    border-radius: 24px;
+    border: 2px solid $color-green-light;
+
+    &::placeholder {
+      color: white;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-green-light;
+      outline-offset: 1px;
+    }
+
+    &:-webkit-autofill {
+      box-shadow: 0 0 0 1000px white inset !important;
+      -webkit-text-fill-color: black !important;
+      transition: background-color 9999s ease-out, color 9999s ease-out;
+    }
+  }
+
+  &__btn {
+    padding: 15px;
+    background-color: $color-green-light;
+    color: white;
+    display: inline-block;
+    border-radius: 66px;
+    border: none;
+    transition: transform 200ms;
+    font-size: 20px;
+    line-height: 1.4;
+    min-width: 100%;
+    text-align: center;
+  }
+
+  &__btn-loading {
+    display: block;
+    margin: auto;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
