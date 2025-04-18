@@ -214,6 +214,7 @@ a {
     transform: translateY(-12px);
     display: flex;
     align-items: center;
+    pointer-events: none;
 
     &::before {
       content: attr(data-text);

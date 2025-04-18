@@ -134,17 +134,16 @@
     color: $color-green;
   }
 
-  &__slide-list {
-    padding-left: 16px;
+  &__slide-content {
+    & ul {
+      padding-left: 16px;
+    }
+
     & li {
       margin: 13px 0;
     }
     & li::marker {
       color: $color-green;
-    }
-
-    &--bold {
-      font-weight: 700;
     }
   }
 }

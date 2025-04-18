@@ -17,5 +17,4 @@
             </div>
         </div>
     </section>
-
 <?php endif; ?>
