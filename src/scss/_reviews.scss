@@ -52,9 +52,9 @@
 
   &__item {
     flex-shrink: 0;
-    width: 343px;
-    aspect-ratio: 343 / 335;
-    object-fit: cover;
-    object-position: top center;
+  }
+
+  &__img {
+    width: 100%;
   }
 }

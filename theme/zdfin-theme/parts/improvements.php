@@ -1,0 +1,227 @@
+<div class="improvements">
+    <div class="container">
+        <div class="title">После работы с нами вы:</div>
+    </div>
+    <div class="improvements__shift">
+        <div class="improvements__slider" data-simplebar>
+            <ol class="improvements__slider-track">
+                <li class="improvements__item" style="
+                background-image: linear-gradient(
+                    to bottom,
+                    white 0%,
+                    rgba(255, 255, 255, 0) 70%
+                  ),
+                  url('<?= get_template_directory_uri() ?>/assets/img/improvements/image1.jpg');
+              ">
+                    <div class="improvements__item-effect">
+                        <p class="improvements__item-text">
+                            Получите прозрачную картину доходов и расходов
+                        </p>
+                    </div>
+                    <div class="improvements__item-bottom">
+                        <button class="btn-white" data-improvements="improvements-modal-1">
+                            Подробнее
+                        </button>
+                    </div>
+                </li>
+                <li class="improvements__item" style="
+                background-image: linear-gradient(
+                    to bottom,
+                    white 0%,
+                    rgba(255, 255, 255, 0) 70%
+                  ),
+                  url('<?= get_template_directory_uri() ?>/assets/img/improvements/image2.jpg');
+              ">
+                    <div class="improvements__item-effect">
+                        <p class="improvements__item-text">Увеличите прибыль</p>
+                    </div>
+                    <div class="improvements__item-bottom">
+                        <button class="btn-white" data-improvements="improvements-modal-2">
+                            Подробнее
+                        </button>
+                    </div>
+                </li>
+                <li class="improvements__item" style="
+                background-image: linear-gradient(
+                    to bottom,
+                    white 0%,
+                    rgba(255, 255, 255, 0) 70%
+                  ),
+                  url('<?= get_template_directory_uri() ?>/assets/img/improvements/image3.jpg');
+              ">
+                    <div class="improvements__item-effect">
+                        <p class="improvements__item-text">
+                            Избавитетесь от кассовых разрывов
+                        </p>
+                    </div>
+                    <div class="improvements__item-bottom">
+                        <button class="btn-white" data-improvements="improvements-modal-3">
+                            Подробнее
+                        </button>
+                    </div>
+                </li>
+                <li class="improvements__item" style="
+                background-image: linear-gradient(
+                    to bottom,
+                    white 0%,
+                    rgba(255, 255, 255, 0) 70%
+                  ),
+                  url('<?= get_template_directory_uri() ?>/assets/img/improvements/image4.jpg');
+              ">
+                    <div class="improvements__item-effect">
+                        <p class="improvements__item-text">
+                            Имеете 5 ключевых задач на каждую неделю для улучшения
+                            финансового состояния
+                        </p>
+                    </div>
+                    <div class="improvements__item-bottom">
+                        <button class="btn-white" data-improvements="improvements-modal-4">
+                            Подробнее
+                        </button>
+                    </div>
+                </li>
+                <li class="improvements__item" style="
+                background-image: linear-gradient(
+                    to bottom,
+                    white 0%,
+                    rgba(255, 255, 255, 0) 70%
+                  ),
+                  url('<?= get_template_directory_uri() ?>/assets/img/improvements/image5.jpg');
+              ">
+                    <div class="improvements__item-effect">
+                        <p class="improvements__item-text">
+                            Имеете отчет ДДС (движение денежных средств) – контроль
+                            доходов и расходов.
+                        </p>
+                    </div>
+                    <div class="improvements__item-bottom">
+                        <button class="btn-white" data-improvements="improvements-modal-5">
+                            Подробнее
+                        </button>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="improvements-modal" id="improvements-modal-1">
+    <div class="improvements-modal__inner">
+        <button class="improvements-modal__close" aria-label="закрыть окно"></button>
+        <p class="improvements-modal__title">
+            Прозрачная картина доходов и расходов
+        </p>
+        <p class="improvements-modal__descr">
+            Вы больше не будете гадать, куда уходят деньги. Мы настроим учет таким
+            образом, чтобы вы видели реальную финансовую ситуацию в любой момент.
+        </p>
+        <p class="improvements-modal__list-descr">Это позволит:</p>
+        <ul class="improvements-modal__list">
+            <li class="improvements-modal__list-item">
+                Разделить прибыльные и убыточные направления бизнеса.
+            </li>
+            <li class="improvements-modal__list-item">
+                Четко понимать, какие статьи расходов можно сократить.
+            </li>
+            <li class="improvements-modal__list-item">
+                Прогнозировать финансовые потоки и управлять ими осознанно.
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="improvements-modal" id="improvements-modal-2">
+    <div class="improvements-modal__inner">
+        <button class="improvements-modal__close" aria-label="закрыть окно"></button>
+        <p class="improvements-modal__title">Увеличение прибыли</p>
+        <p class="improvements-modal__descr">
+            Мы выявим убыточные направления, оптимизируем расходы и поможем вам
+            зарабатывать больше без хаотичного увеличения продаж.
+        </p>
+        <p class="improvements-modal__list-descr">Вы сможете:</p>
+        <ul class="improvements-modal__list">
+            <li class="improvements-modal__list-item">
+                Определить самые прибыльные продукты или услуги.
+            </li>
+            <li class="improvements-modal__list-item">
+                Сократить ненужные траты, которые снижают доходность.
+            </li>
+            <li class="improvements-modal__list-item">
+                Повысить маржинальность бизнеса за счет правильного управления
+                финансами.
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="improvements-modal" id="improvements-modal-3">
+    <div class="improvements-modal__inner">
+        <button class="improvements-modal__close" aria-label="закрыть окно"></button>
+        <p class="improvements-modal__title">Избавление от кассовых разрывов</p>
+        <p class="improvements-modal__descr">
+            Проблема нехватки денег в нужный момент знакома каждому бизнесу. Мы
+            поможем устранить кассовые разрывы, настроив систему финансового
+            планирования, благодаря которой вы:
+        </p>
+        <ul class="improvements-modal__list">
+            <li class="improvements-modal__list-item">
+                Будете знать, когда и какие платежи предстоят.
+            </li>
+            <li class="improvements-modal__list-item">
+                Сможете заранее подготовить финансовую подушку безопасности.
+            </li>
+            <li class="improvements-modal__list-item">
+                Избежите неожиданных долгов и штрафов из-за нехватки средств.
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="improvements-modal" id="improvements-modal-4">
+    <div class="improvements-modal__inner">
+        <button class="improvements-modal__close" aria-label="закрыть окно"></button>
+        <p class="improvements-modal__title">
+            Четкий финансовый план на 3–12 месяцев
+        </p>
+        <p class="improvements-modal__descr">
+            Без долгосрочного планирования бизнес теряет устойчивость. Мы разработаем
+            стратегию, в которой будет прописано:
+        </p>
+        <p class="improvements-modal__list-descr">Это позволит:</p>
+        <ul class="improvements-modal__list">
+            <li class="improvements-modal__list-item">
+                Какие финансовые цели нужно достичь и в какие сроки.
+            </li>
+            <li class="improvements-modal__list-item">
+                Сколько денег потребуется для развития, масштабирования, рекламы.
+            </li>
+            <li class="improvements-modal__list-item">
+                Как сократить риски и подготовиться к возможным финансовым трудностям.
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="improvements-modal" id="improvements-modal-5">
+    <div class="improvements-modal__inner">
+        <button class="improvements-modal__close" aria-label="закрыть окно"></button>
+        <p class="improvements-modal__title">
+            Топ-5 приоритетных действий каждую неделю
+        </p>
+        <p class="improvements-modal__descr">
+            Владельцы бизнеса часто перегружены рутиной и не знают,
+            на чем сосредоточиться в первую очередь.
+        </p>
+        <p class="improvements-modal__list-descr">Мы поможем вам выстроить систему, в которой:</p>
+        <ul class="improvements-modal__list">
+            <li class="improvements-modal__list-item">
+                Каждую неделю вы будете получать список ключевых действий для финансового роста.
+            </li>
+            <li class="improvements-modal__list-item">
+                Решения будут приниматься на основе данных, а не интуиции.
+            </li>
+            <li class="improvements-modal__list-item">
+                Вы сможете сосредоточиться на главных задачах, а не тратить время на мелочи.
+            </li>
+        </ul>
+    </div>
+</div>

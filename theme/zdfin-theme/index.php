@@ -1,0 +1,12 @@
+<?php
+get_header('index');
+get_template_part('parts/reasons');
+get_template_part('parts/businesses');
+get_template_part('parts/choices');
+get_template_part('parts/improvements');
+get_template_part('parts/stages');
+get_template_part('parts/tools');
+get_template_part('parts/cases');
+get_template_part('parts/team');
+get_template_part('parts/reviews');
+get_footer();
