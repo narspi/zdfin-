@@ -17,16 +17,18 @@
                 </div>
             </div>
             <div class="top__extra">
-                <a href="#" class="top__extra-master">
-                    Бесплатный<br>мастер-класс
-                </a>
-                <div class="top__extra-row">
-                    <a href="#" class="top__extra-row-link">Скачать<br>презентацию</a>
-                    <a href="#" class="top__extra-row-link">Получить<br>коммерческое<br>предложение</a>
-                </div>
-                <a href="#" class="top__extra-nalog">
-                    Налоговая<br>реформа 2025
-                </a>
+                    {{#if master_class}}
+                    <a href="#" class="top__extra-master">
+                        Бесплатный<br>мастер-класс
+                    </a>
+                    {{/if}}
+                    <div class="top__extra-row">
+                        <a href="#" class="top__extra-row-link">Скачать<br>презентацию</a>
+                        <a href="#" class="top__extra-row-link">Получить<br>коммерческое<br>предложение</a>
+                    </div>
+                    <a href="#" class="top__extra-nalog {{#unless master_class}}top__extra-nalog--bottom{{/unless}}">
+                        Налоговая<br>реформа 2025
+                    </a>
             </div>
         </div>
     </div>
