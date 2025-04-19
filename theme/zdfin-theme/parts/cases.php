@@ -36,49 +36,23 @@
                                     <p class="cases__slide-descr cases__slide-descr--arrow">
                                         Точка А
                                     </p>
-                                    <ul class="cases__slide-list">
-                                        <li>Оборот 1 млн. в месяц</li>
-                                        <li>1 точка продажи</li>
-                                        <li>Нет понимания какая чистая прибыль</li>
-                                        <li>Неизвестно, на что делать упор</li>
-                                    </ul>
+                                    <div class="cases__slide-content">
+                                        <?php the_sub_field('case-a-content'); ?>
+                                    </div>
                                 </div>
                                 <div class="cases__slide-item cases__slide-item--2">
                                     <p class="cases__slide-descr cases__slide-descr--color">
                                         Точка Б / Результат
                                     </p>
-                                    <ul class="cases__slide-list cases__slide-list--bold">
-                                        <li>
-                                            <span class="cases__slide-modif--color">Увеличили оборот на 6 млн. руб.</span>
-                                            в год, где стоимость наших услуг составила 250 тыс. руб.
-                                        </li>
-                                        <li>
-                                            Всего за 3 месяца смогли подготовиться к
-                                            <span class="cases__slide-modif--color">открытию 2-ой точки</span>
-                                        </li>
-                                        <li>
-                                            <span class="cases__slide-modif--color">Избавили клиентов от растерянности и
-                                                непонимания,</span>
-                                            что происходит с бизнесом, появилась уверенность и желание
-                                            развивать компанию
-                                        </li>
-                                        <li>
-                                            Клиент
-                                            <span class="cases__slide-modif--color">имеет пошаговый план действий</span>
-                                            по увеличению суммы девидентов в 3 раза за 6 месяцев
-                                        </li>
-                                    </ul>
+                                    <div class="cases__slide-content">
+                                        <?php the_sub_field('case-b-content'); ?>
+                                    </div>
                                 </div>
                                 <div class="cases__slide-item cases__slide-item--3">
                                     <p class="cases__slide-descr">Что сделано</p>
-                                    <ul class="cases__slide-list">
-                                        <li>Внедрение ДДС, ОПиУ и Баланс</li>
-                                        <li>Автоматизация 1С</li>
-                                        <li>
-                                            Выявление наиболее продающихся и маржинальных товаров
-                                        </li>
-                                        <li>Избавление от ненужных товаров</li>
-                                    </ul>
+                                    <div class="cases__slide-content">
+                                        <?php the_sub_field('case-work-content'); ?>
+                                    </div>
                                 </div>
                             </div>
                         </article>

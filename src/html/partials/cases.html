@@ -7,6 +7,7 @@
     </p>
     <div class="cases__slider swiper">
       <div class="swiper-wrapper">
+        {{#repeat 3}}
         <!-- article -->
         <article class="swiper-slide cases__slide">
           <div class="cases__slide-top">
@@ -44,19 +45,19 @@
               <div class="cases__slide-content">
                 <ul>
                   <li style="font-weight: bold;">
-                    <span class="cases__slide-modif--color"
+                    <span style="color: #2b660b;"
                       >Увеличили оборот на 6 млн. руб.</span
                     >
                     в год, где стоимость наших услуг составила 250 тыс. руб.
                   </li>
                   <li style="font-weight: bold;">
                     Всего за 3 месяца смогли подготовиться к
-                    <span class="cases__slide-modif--color"
+                    <span style="color: #2b660b;"
                       >открытию 2-ой точки</span
                     >
                   </li>
                   <li style="font-weight: bold;">
-                    <span class="cases__slide-modif--color"
+                    <span style="color: #2b660b;"
                       >Избавили клиентов от растерянности и непонимания,</span
                     >
                     что происходит с бизнесом, появилась уверенность и желание
@@ -64,7 +65,7 @@
                   </li>
                   <li style="font-weight: bold;">
                     Клиент
-                    <span class="cases__slide-modif--color"
+                    <span style="color: #2b660b;"
                       >имеет пошаговый план действий</span
                     >
                     по увеличению суммы девидентов в 3 раза за 6 месяцев
@@ -86,6 +87,7 @@
           </div>
         </article>
         <!-- article -->
+        {{/repeat}}
       </div>
     </div>
     <div class="cases__scrollbar"></div>

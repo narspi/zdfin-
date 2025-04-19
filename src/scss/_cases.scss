@@ -44,9 +44,9 @@
     margin-top: -15px;
     border-radius: 15px;
     display: grid;
-    grid-template-columns: 398fr 673fr;
+    grid-template-columns: 483fr 578fr;
     grid-template-rows: auto;
-    gap: 40px 33px;
+    gap: 20px;
     grid-template-areas:
       "item1 item2"
       "item3 item2";
@@ -128,10 +128,6 @@
         background-repeat: no-repeat;
       }
     }
-  }
-
-  &__slide-modif--color {
-    color: $color-green;
   }
 
   &__slide-content {

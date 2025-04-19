@@ -341,7 +341,11 @@
         padding-top: 20px;
         padding-bottom: 20px;
         background-color: $color-green;
-        color: white;
+        color: white !important;
+
+        & span {
+          color: white !important;
+        }
       }
 
       &--3 {
@@ -349,7 +353,7 @@
       }
     }
 
-    &__slide-item--2 &__slide-list li::marker {
+    &__slide-item--2 ul li::marker {
       color: $color-green-light;
     }
 
@@ -361,10 +365,6 @@
       &--color {
         color: white;
       }
-    }
-
-    &__slide-modif--color {
-      color: inherit;
     }
   }
 
@@ -1021,14 +1021,14 @@
       padding-right: 15px;
       padding-bottom: 10px;
       font-size: 16px;
+
+      & li {
+        margin: 7px 0;
+      }
     }
 
     &__slide-descr {
       font-size: 20px;
-    }
-
-    &__slide-list li {
-      margin: 7px 0;
     }
   }
 

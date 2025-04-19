@@ -99,6 +99,9 @@ document.addEventListener("DOMContentLoaded", function () {
       grabCursor: true,
       mousewheel: true,
       autoHeight: true,
+      mousewheel: {
+        releaseOnEdges: true
+      },
       scrollbar: {
         el: ".cases__scrollbar",
         draggable: true,
